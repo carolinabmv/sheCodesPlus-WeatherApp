@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <script
+      src="https://kit.fontawesome.com/c356afc66b.js"
+      crossorigin="anonymous"
+    ></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+
+    <title>Weather App</title>
+  </head>
+  <body>
+    <div class="main-body">
+      <div class="container text-center form-search-city">
+        <div class="row">
+          <div class="col-12">
+            <form class="form-search-city" id="form-search-city">
+              <a title="Current Location" href="#"
+                ><i class="fa-solid fa-location-dot" id="location-icon"></i
+              ></a>
+              <input
+                type="text"
+                id="search-city"
+                placeholder="  Search a city here"
+              />
+              <input type="submit" value="Search" id="form-search-button" />
+            </form>
+          </div>
+        </div>
+      </div>
+      <div class="container text-center upper-body">
+        <div class="row">
+          <div class="col">
+            <ul class="day-info">
+              <li class="date" id="date-today"></li>
+              <li class="time" id="time-now"></li>
+              <li class="city"></li>
+              <li class="temperature">
+                <span id="temperature"></span>
+                <a href="#" id="tempC">C</a> / <a href="#" id="tempF">F</a>
+                <img src="media/sun.png" alt="" />
+              </li>
+            </ul>
+          </div>
+          <div class="col">
+            <ul class="extra-info">
+              <li>
+                <i class="fa-solid fa-temperature-half"></i> Feels like:
+                <span id="feels-like"></span>
+              </li>
+              <li>
+                <i class="fa-solid fa-arrow-up-long"></i> Max:
+                <span id="max"></span> |
+                <i class="fa-solid fa-arrow-down-long"></i> Min:
+                <span id="min"></span>
+              </li>
+              <li>
+                <i class="fa-solid fa-droplet"></i>Humidity:
+                <span id="humidity"></span>
+              </li>
+              <li>
+                <i class="fa-solid fa-wind"></i> Windspeed:
+                <span id="windspeed"></span>
+              </li>
+            </ul>
+            <br />
+          </div>
+        </div>
+      </div>
+      <div class="container text-center lower-body">
+        <div class="row temperature-week">
+          <div class="col">
+            Thu <br />
+            <i class="bi bi-sun"></i> <br />
+            12ºC | <strong>20ºC</strong>
+          </div>
+          <div class="col">
+            Fri <br />
+            <i class="bi bi-cloud-sun"></i><br />
+            10ºC | <strong>18ºC</strong>
+          </div>
+          <div class="col">
+            Sat <br />
+            <i class="bi bi-cloud-rain"></i><br />
+            11ºC | <strong>17ºC</strong>
+          </div>
+          <div class="col">
+            Mon <br />
+            <i class="bi bi-cloud-sun"></i><br />
+            12ºC | <strong>19ºC</strong>
+          </div>
+          <div class="col">
+            Wed <br />
+            <i class="bi bi-cloud-sleet"></i><br />
+            8ºC | <strong>13ºC</strong>
+          </div>
+        </div>
+      </div>
+      <footer>
+        Coded by
+        <a href="https://www.instagram.com/ana.carolina.bmv/">Ana Carolina</a>
+      </footer>
+    </div>
+    <script src="script.js"></script>
+  </body>
+</html>
